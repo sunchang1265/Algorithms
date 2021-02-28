@@ -11,6 +11,8 @@ namespace Leetcode
             //int[] twoSumOutput = twoSum.TwoSum(input, 18);
             int[] twoSumOutput = twoSum.TwoSumBetter(input, 18);
             Console.WriteLine($"[{twoSumOutput[0]}], [{twoSumOutput[1]}]");
+
+            Console.ReadLine();
         }
     }
 }
