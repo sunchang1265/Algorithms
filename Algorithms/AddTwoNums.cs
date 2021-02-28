@@ -4,48 +4,27 @@ using System.Text;
 
 namespace Leetcode
 {
-    public class AddTwoNums
+    class AddTwoNums
     {
-        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
-            int temp = 0;
-            
-            while (l1.next != null)
+            ListNode result = new ListNode();
+            ListNode head = result;
+            int increment = 0;
+            while (l1 != null || l2 != null)
             {
-                int increment = 0;
-                temp = l2.val + l1.val;
-                if (temp >= 10) 
-                {
-                    increment = 1;
-                    temp-=10;
-                }
+                int x = l1 != null ? l1.val : 0;
+                int y = l2 != null ? l2.val : 0;
+                int sum = x + y + increment;
+                increment = sum / 10;
+                head.next = new ListNode() { val = sum % 10 };
+                head = head.next;
 
-                if(l1.next == null)
-                {
-                    l2.val = temp;
-                    if (l2.next != null) l2.next.val += increment;
-                    else if (increment != 0)
-                    {
-                        l2.next = new ListNode(){val = increment};
-                    }
-                    return l2;
-                }
-
-                if(l2.next == null)
-                {
-                    l1.val = temp;
-                    if (l1.next != null) l1.next.val += increment;
-                    else if (increment != 0)
-                    {
-                        l1.next = new ListNode(){val = increment};
-                    }
-                    return l1;
-                }
-                
-                l1 = l1.next;
-                l2 = l2.next;
+                if (l1 != null) l1 = l1.next;
+                if (l2 != null) l2 = l2.next;
             }
-            return null;
+            if (increment == 1) head.next = new ListNode() { val = increment };
+            return result.next;
         }
     }
 
