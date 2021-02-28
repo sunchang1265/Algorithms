@@ -7,6 +7,12 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
+            //test ZigZagConversion
+            TestZigZagConversion();
+
+            //test Palindrome
+            //TestPalindrome();
+
             //test TwoSum
             //TestTwoSums();         
 
@@ -14,9 +20,23 @@ namespace Leetcode
             //TestAddTwoNumbers();
 
             //test Longest Substring without repeat
-            TestLongestSubstringNoRepeat();
+            //TestLongestSubstringNoRepeat();
             
             Console.ReadLine();
+        }
+
+        private static void TestZigZagConversion()
+        {
+            string input = "PAYPALISHIRING";
+            Console.WriteLine($"TestZigZagConversion input: {input}");
+            Console.WriteLine($"TestZigZagConversion: {ZigZagConversion.Convert(input, 5)}");
+        }
+
+        private static void TestPalindrome()
+        {
+            string input = "ababababa";
+            Console.WriteLine($"Longest Palindromic Substring input: {input}");
+            Console.WriteLine($"Longest Palindromic Substring: {Palindrome.LongestPalindrome(input)}");
         }
 
         private static void TestLongestSubstringNoRepeat()
