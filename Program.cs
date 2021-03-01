@@ -7,8 +7,11 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
+            //test ReverseInteger
+            //TestReverseInteger();
+
             //test ZigZagConversion
-            TestZigZagConversion();
+            //TestZigZagConversion();
 
             //test Palindrome
             //TestPalindrome();
@@ -23,6 +26,13 @@ namespace Leetcode
             //TestLongestSubstringNoRepeat();
             
             Console.ReadLine();
+        }
+
+        private static void TestReverseInteger()
+        {
+            int input = -2147483648;
+            Console.WriteLine($"ReverseInteger input: {input}");
+            Console.WriteLine($"ReverseInteger: {ReverseInteger.ReverseBest(input)}");
         }
 
         private static void TestZigZagConversion()
