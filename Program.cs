@@ -7,6 +7,9 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
+            //test atoi
+            TestAtoi();
+
             //test ReverseInteger
             //TestReverseInteger();
 
@@ -26,6 +29,14 @@ namespace Leetcode
             //TestLongestSubstringNoRepeat();
             
             Console.ReadLine();
+        }
+
+        private static void TestAtoi()
+        {
+            string input = "      -000000214a7483648A";
+            input = "2147483646";
+            Console.WriteLine($"input: {input}");
+            Console.WriteLine($"output: {Atoi.MyAtoi(input)}");
         }
 
         private static void TestReverseInteger()
