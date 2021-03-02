@@ -7,8 +7,11 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
+            //test integerPalindrome
+            //TestIntegerPalindrome();
+
             //test atoi
-            TestAtoi();
+            //TestAtoi();
 
             //test ReverseInteger
             //TestReverseInteger();
@@ -29,6 +32,13 @@ namespace Leetcode
             //TestLongestSubstringNoRepeat();
             
             Console.ReadLine();
+        }
+
+        private static void TestIntegerPalindrome()
+        {
+            int input = 121;
+            Console.WriteLine($"input: {input}");
+            Console.WriteLine($"output: {IntegerPalindrome.IsPalindromeNoString(input)}");
         }
 
         private static void TestAtoi()
