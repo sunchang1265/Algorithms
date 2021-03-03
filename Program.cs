@@ -7,6 +7,9 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
+            //test integer tp Roman
+            //TestIntegerToRoman();
+
             //test integerPalindrome
             //TestIntegerPalindrome();
 
@@ -30,10 +33,15 @@ namespace Leetcode
 
             //test Longest Substring without repeat
             //TestLongestSubstringNoRepeat();
-            
+
             Console.ReadLine();
         }
-
+        private static void TestIntegerToRoman()
+        {
+            int input = 900;
+            Console.WriteLine($"input: {input}");
+            Console.WriteLine($"output: {IntToRomanNum.IntToRomanBetter(input)}");
+        }
         private static void TestIntegerPalindrome()
         {
             int input = 121;
